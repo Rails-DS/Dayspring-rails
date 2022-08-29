@@ -23,6 +23,7 @@ default: &default
   host: localhost
   username: shibu
   password: shibu
+
 development:
   <<: *default
   database: dayspring_rails_development
