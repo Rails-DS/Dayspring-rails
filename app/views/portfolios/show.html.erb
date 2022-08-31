@@ -1,4 +1,4 @@
-<%= image_tag @portfolio_item.main_image %>
+<%= image_tag @portfolio_item.main_image if @portfolio_item.main_image  %>
 
 <h2><%= @portfolio_item.title%></h2>
 
