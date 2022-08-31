@@ -25,14 +25,14 @@ class PortfoliosController < ApplicationController
 #  Editing the portfolio 
 
   def edit
-  	@portfolio_item = Portfolio.find(params[:id])
+  	@portfolio_item = Portfolio.friendly.find(params[:id])
   end
 
 
 # Updatig portfolio 
 
   def update
-  	 @portfolio_item = Portfolio.find(params[:id])
+  	 @portfolio_item = Portfolio.friendly.find(params[:id])
 
     respond_to do |format|
       if @portfolio_item.update(params.require(:portfolio).permit(:title, :subtitle, :body))
@@ -44,12 +44,12 @@ class PortfoliosController < ApplicationController
   end
 
   def show 
-  	 @portfolio_item = Portfolio.find(params[:id])
+  	 @portfolio_item = Portfolio.friendly.find(params[:id])
   end
 
  def destroy
 
-	@portfolio_item = Portfolio.find(params[:id])
+	@portfolio_item = Portfolio.friendly.find(params[:id])
 	puts "coming here"
     @portfolio_item.destroy!
 
