@@ -36,7 +36,7 @@ class PortfoliosController < ApplicationController
 
     respond_to do |format|
       if @portfolio_item.update(params.require(:portfolio).permit(:title, :subtitle, :body))
-        format.html { redirect_to portfolios_path(@blog), notice: "Blog was successfully updated." }
+        format.html { redirect_to portfolios_path(@portfolio_item), notice: "Blog was successfully updated." }
        else
         format.html { render :edit, status: :unprocessable_entity }
       end
@@ -45,6 +45,18 @@ class PortfoliosController < ApplicationController
 
   def show 
   	 @portfolio_item = Portfolio.find(params[:id])
+  end
+
+ def destroy
+
+	@portfolio_item = Portfolio.find(params[:id])
+	puts "coming here"
+    @portfolio_item.destroy
+
+    respond_to do |format|
+      format.html { redirect_to portfolios_url, notice: "Portfolio item was Removed." }
+      
+    end
   end
 
 end
