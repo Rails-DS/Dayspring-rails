@@ -4,6 +4,14 @@ class PortfoliosController < ApplicationController
 	end
 
 
+  def angular
+    @angular_portfolio_items = Portfolio.angular
+  end
+
+  def rubyonrails
+    @rubyonrails_items = Portfolio.ruby_on_rails
+  end
+
 	def new
 		@portfolio_item = Portfolio.new
 	end
