@@ -1,8 +1,8 @@
-## Simple Rails Portfolio Application 
+# Simple Rails Portfolio Application 
 
 - This application runs on Ruby on rails 7 which allows user to create their own portfolios
 
-# Features 
+### Features 
 
 * Blogs 
 * Portfolio
