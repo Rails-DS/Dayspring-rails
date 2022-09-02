@@ -49,5 +49,5 @@ puts "9 Portfolios Created ........!!!!!!"
 			main_image: "https://place-hold.it/600x400/666/fff", 
 			thumb_image: "https://place-hold.it/350x200/666/fff" 
 
-		)	
+		)	 
 end
