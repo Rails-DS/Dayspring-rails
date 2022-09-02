@@ -3,11 +3,12 @@ class PortfoliosController < ApplicationController
 		@portfolio_items = Portfolio.all
 	end
 
-
+# Method to route for only filtered subtitles  [ subtitle: Angular]
   def angular
     @angular_portfolio_items = Portfolio.angular
   end
 
+# Method to route for only filtered subtitles [ subtitle: Ruby on Rails ]
   def rubyonrails
     @rubyonrails_items = Portfolio.ruby_on_rails
   end
