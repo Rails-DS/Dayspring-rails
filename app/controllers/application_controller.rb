@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 
-	#using concerns	
+	#using concerns 	
 	include DeviseWhitelist
 	
 end
