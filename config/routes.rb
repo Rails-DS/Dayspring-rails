@@ -12,5 +12,7 @@ Rails.application.routes.draw do
     get :toggle_status
    end
   end
+  
+  #  User main home page
   root "pages#home"
 end
