@@ -7,11 +7,12 @@
   <% @blogs.each do |blog| %>
     <%= render blog %>
     <%= link_to blog.status, toggle_status_blog_path(blog) %>
-    <hr>
+    
     <p>
       <%= link_to "Show this blog", blog %>
       <%= link_to "Edit", edit_blog_path(blog) %>
     </p>
+    <hr>
   <% end %>
   
 </div>
